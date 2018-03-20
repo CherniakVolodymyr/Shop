@@ -1,0 +1,20 @@
+{% if forloop.counter < 5 %}
+    <div class="col-md-3">
+        <div class="card ">
+            <div class="card-body">
+                <div class="card-img-top ">
+                    <img class="img-flex" src="{{ item.image.url }}" >
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ item.Product.name|truncatechars_html:30 }}</h5>
+                    <p class="card-text">{{ item.Product.descpiption|truncatechars_html:80 }}</p>
+                    <p class="card-text">{{ item.Product.prise }} UAN</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary "> Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ break }}
+{% endif %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block carousel %}
+
+
+    <div class="img">
+    {% include 'navbar.html' %}
+
+    <div class="con" style="padding-top: 15%">
+        <h4>HELLO, MY FRIEND</h4>
+    </div>
+
+    </div>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+        <div class="container-fluid section section-1">
+            <h4 style="text-align: center; padding: 20px ">НОВИНКИ</h4>
+            <div class="prod-item">
+                <div class="row" >
+                    {% for item in product %}
+                        {% include 'prod-item.html' %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+{#         <div class="container-fluid section section-2">#}
+{#            <h4 style="text-align: center; padding: 20px ">ТЕЛЕФОНИ</h4>#}
+{#            <div class="prod-item">#}
+{#                <div class="row" >#}
+{#                    {% for item in products_images_phones %}#}
+{#                        {% include 'prod-item.html' %}#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{##}
+{#         <div class="container-fluid section section-1">#}
+{#            <h4 style="text-align: center; padding: 20px ">НОУТБУКИ</h4>#}
+{#            <div class="prod-item">#}
+{#                <div class="row" >#}
+{#                    {% for item in products_images_laptops %}#}
+{#                        {% include 'prod-item.html' %}#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+
+{% endblock %}
